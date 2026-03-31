@@ -1,1 +1,39 @@
 /* The Rusty Nail - Styles  */
+:root {
+    --black: #0a0a0a;
+    --charcoal: #141414;
+    --iron: #1e1e1e;
+    --rust: #b94a1a;
+    --rust-light: #e05c22;
+    --yellow: #d4a017;
+    --cream: #e8e0d0;
+    --grey-mid: #888880;
+    --grey-light: #c8c0b0;
+
+    --display-font: 'Bebas Neue';
+    --body-font: 'Barlow Condensed';
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--black);
+    color: var(--cream);
+    font-family: var(--body-font);
+}
+
+body::before {
+    display: block;
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.16'/%3E%3C/svg%3E");
+ }
