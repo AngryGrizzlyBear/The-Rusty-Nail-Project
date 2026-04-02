@@ -65,6 +65,24 @@ nav li a {
     color: var(--rust-light)
 }
 
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(var(--iron), var(--charcoal));
+}
+
+.hero>h1 {
+    font-family: var(--display-font);
+    font-size: 4rem;
+}
+
+.featured-grid {
+    display: grid;
+}
+
 #hamburger {
     display: flex;
     flex-direction: column;
@@ -80,6 +98,11 @@ nav li a {
     background-color: var(--cream);
 }
 
+@media (min-width: 560px) {
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media (min-width: 768px) {
     #hamburger {
@@ -91,5 +114,11 @@ nav li a {
         overflow: visible;
         display: flex;
         gap: 1rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .featured-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
