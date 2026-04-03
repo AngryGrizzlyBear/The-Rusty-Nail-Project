@@ -40,6 +40,7 @@ body::before {
 
 nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
@@ -50,6 +51,7 @@ nav ul {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+    flex-basis: 100%;
 }
 
 nav ul.open {
@@ -62,7 +64,7 @@ nav li {
 
 nav li a {
     padding: 5px;
-    color: var(--rust-light)
+    color: var(--rust-light);
 }
 
 .hero {
@@ -90,7 +92,6 @@ nav li a {
 .about-image {
     background: var(--charcoal);
     min-height: 300px;
-    aspect-ratio: 1;
 }
 
 .about-text > h2{
@@ -148,6 +149,10 @@ nav li a {
         grid-template-columns: repeat(3, 1fr);
     }
 
+    .about-image {
+        aspect-ratio: 1;
+    }
+    
     .about-strip{
         display: grid;
         grid-template-columns: 1fr 1fr;
