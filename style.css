@@ -83,6 +83,21 @@ nav li a {
     display: grid;
 }
 
+.about-strip {
+    padding: 2rem;
+}
+
+.about-image {
+    background: var(--charcoal);
+    min-height: 300px;
+    aspect-ratio: 1;
+}
+
+.about-text > h2{
+    font-family: var(--display-font);
+    font-size: 3rem;
+}
+
 #hamburger {
     display: flex;
     flex-direction: column;
@@ -120,5 +135,11 @@ nav li a {
 @media (min-width: 900px) {
     .featured-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about-strip{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
     }
 }
