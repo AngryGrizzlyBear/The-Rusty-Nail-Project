@@ -33,9 +33,7 @@ const observer = new IntersectionObserver((entries) => {
 const fadeUpElements = document.querySelectorAll('.fade-up');
 fadeUpElements.forEach((el) => observer.observe(el));
 
-function renderEvents(events) {
-    const eventsList = document.getElementById('events-list');
-
+function renderEvents(events, eventsList) {
     const eventsHTML = events.map(event => {
         const ticketButton = event.soldOut
             ? `<p class="sold-out"> SOLD OUT </p>`
@@ -58,3 +56,20 @@ function renderEvents(events) {
     eventsList.innerHTML = eventsHTML;
 }
 
+async function loadEvents() {
+    const eventsList = document.querySelector('#events-list');
+
+    if (!eventsList) return;
+
+    try {
+        const response = await fetch('data/events.json');
+        const data = await response.json();
+
+        renderEvents(data, eventsList);
+    } catch (error) {
+        console.error('Error loading events:', error);
+        eventsList.innerHTML = '<p>Unable to load events at this time</p>'
+    }
+}
+
+loadEvents();
