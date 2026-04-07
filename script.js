@@ -32,3 +32,29 @@ const observer = new IntersectionObserver((entries) => {
 
 const fadeUpElements = document.querySelectorAll('.fade-up');
 fadeUpElements.forEach((el) => observer.observe(el));
+
+function renderEvents(events) {
+    const eventsList = document.getElementById('events-list');
+
+    const eventsHTML = events.map(event => {
+        const ticketButton = event.soldOut
+            ? `<p class="sold-out"> SOLD OUT </p>`
+            : `<button class="btn-tickets">Tickets</button>`
+
+        const supportLine = event.support
+            ? `<p class="support"> Support: ${event.support}</p>`
+            : ``;
+
+        return `
+            <div class="event-card">
+            <h3>${event.artist}</h3>
+            <p class="date">${event.day} ${event.month}</p>
+            ${supportLine}
+            ${ticketButton}
+            </div>
+                `;
+    }).join('');
+
+    eventsList.innerHTML = eventsHTML;
+}
+
