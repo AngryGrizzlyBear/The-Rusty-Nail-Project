@@ -57,6 +57,7 @@ function renderEvents(events, eventsList) {
 
     eventsList.innerHTML = eventsHTML;
 }
+let allEventsData = [];
 
 async function loadEvents() {
     const eventsList = document.querySelector('#events-list');
@@ -65,13 +66,38 @@ async function loadEvents() {
 
     try {
         const response = await fetch('data/events.json');
-        const data = await response.json();
+        allEventsData = await response.json();
+        renderEvents(allEventsData, eventsList);
 
-        renderEvents(data, eventsList);
+        initFilters(eventsList);
     } catch (error) {
         console.error('Error loading events:', error);
         eventsList.innerHTML = '<p>Unable to load events at this time</p>'
     }
 }
+
+
+function initFilters(eventsList){
+    const buttons = document.querySelectorAll('.filter-buttons button');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const selectedGenre = btn.getAttribute('data-genre');
+            const filtered = (selectedGenre === 'all')
+            ? allEventsData
+            : allEventsData.filter(event => event.genre.toLowerCase() === selectedGenre.toLowerCase());
+
+            filtered.length === 0
+            ? eventsList.innerHTML = '<p>No shows found</p>'
+            : renderEvents(filtered, eventsList);
+
+        });
+    });
+}
+
+
 
 loadEvents();
