@@ -47,6 +47,8 @@ function renderEvents(events, eventsList) {
             <div class="event-card">
             <h3>${event.artist}</h3>
             <p class="date">${event.day} ${event.month}</p>
+            <p class="genre">${event.genre}</p>
+            <p class="price">$${event.price}</p>
             ${supportLine}
             ${ticketButton}
             </div>
