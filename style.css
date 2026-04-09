@@ -116,6 +116,17 @@ nav li a {
 
 }
 
+.date {                                                                                                                                                                                                                                                                  
+color: var(--rust);                                                                                                                           
+font-family: var(--display-font);  
+font-size: 1.5rem;                                                                                                           
+}        
+
+.event-card > h3 {
+    font-family: var(--display-font);
+    font-size: 2rem;
+    color: var(--grey-light);
+}
 
 #hamburger {
     display: flex;
