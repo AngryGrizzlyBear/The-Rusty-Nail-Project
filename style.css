@@ -129,12 +129,61 @@ font-size: 1.5rem;
 }
 
 .genre {
-    background-color: var(--cream);
-    color: var(--rust);
+    background-color: var(--rust);
+    color: var(--cream);
     padding: 2px 8px;
     font-family: var(--display-font);
     font-size: 1.5rem;
     display: inline-block;
+}
+
+.support {
+    color: var(--grey-light);
+    font-size: 1rem;
+}
+
+.price {
+    font-family: var(--display-font);
+    font-size: 1.2rem;
+    color: var(--yellow);
+    text-align: right;
+}
+
+.sold-out {
+    color: var(--grey-mid);
+    font-family: var(--display-font);
+    font-size: 1.2rem;
+    text-decoration: line-through;
+}
+
+.btn-tickets {
+    background-color: var(--rust);
+    color: var(--cream);
+    padding: 7px 14px;
+    border: none;
+    font-family: var(--display-font);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 1rem;
+    padding: 10px;
+}
+
+.filter-buttons button {
+    background-color: var(--iron);
+    color: var(--cream);
+    border: none;
+    padding: 10px;
+    font-family: var(--display-font);
+    cursor: pointer;
+}
+
+.filter-buttons button.active {
+    background-color: var(--rust-light);
+    color: var(--cream);
 }
 
 #hamburger {
@@ -152,8 +201,15 @@ font-size: 1.5rem;
     background-color: var(--cream);
 }
 
+#events-section {
+    padding: 0.9rem;
+}
 
-
+#events-section > h1 {
+    font-family: var(--display-font);
+    font-size: 3rem;
+    color: var(--rust-light);
+}
 
 @media (min-width: 560px) {
     .featured-grid {
