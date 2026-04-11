@@ -116,13 +116,13 @@ nav li a {
 
 }
 
-.date {                                                                                                                                                                                                                                                                  
-color: var(--rust);                                                                                                                           
-font-family: var(--display-font);  
-font-size: 1.5rem;                                                                                                           
-}        
+.date {
+    color: var(--rust);
+    font-family: var(--display-font);
+    font-size: 1.5rem;
+}
 
-.event-card > h3 {
+.event-card>h3 {
     font-family: var(--display-font);
     font-size: 2rem;
     color: var(--grey-light);
@@ -163,7 +163,7 @@ font-size: 1.5rem;
     border: none;
     font-family: var(--display-font);
     cursor: pointer;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 .filter-buttons {
@@ -205,7 +205,7 @@ font-size: 1.5rem;
     padding: 0.9rem;
 }
 
-#events-section > h1 {
+#events-section>h1 {
     font-family: var(--display-font);
     font-size: 3rem;
     color: var(--rust-light);
@@ -222,6 +222,7 @@ font-size: 1.5rem;
         display: grid;
         grid-template-columns: 110px 1fr auto;
         align-items: center;
+        gap: 1rem;
     }
 }
 
