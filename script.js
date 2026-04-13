@@ -45,12 +45,9 @@ function renderEvents(events, eventsList) {
 
         return `
             <div class="event-card">
-            <h3>${event.artist}</h3>
-            <p class="date">${event.day} ${event.month}</p>
-            <p class="genre">${event.genre}</p>
-            <p class="price">$${event.price}</p>
-            ${supportLine}
-            ${ticketButton}
+            <div class="date"><p>${event.day} ${event.month}</p> </div>
+            <div class="event-info"> <h3>${event.artist}</h3> <p class="genre">${event.genre}</p> ${supportLine} </div>
+            <div class="event-action">   <p class="price">$${event.price}</p> ${ticketButton}</div>
             </div>
                 `;
     }).join('');
@@ -77,7 +74,7 @@ async function loadEvents() {
 }
 
 
-function initFilters(eventsList){
+function initFilters(eventsList) {
     const buttons = document.querySelectorAll('.filter-buttons button');
 
     buttons.forEach(btn => {
@@ -87,12 +84,12 @@ function initFilters(eventsList){
 
             const selectedGenre = btn.getAttribute('data-genre');
             const filtered = (selectedGenre === 'all')
-            ? allEventsData
-            : allEventsData.filter(event => event.genre.toLowerCase() === selectedGenre.toLowerCase());
+                ? allEventsData
+                : allEventsData.filter(event => event.genre.toLowerCase() === selectedGenre.toLowerCase());
 
             filtered.length === 0
-            ? eventsList.innerHTML = '<p>No shows found</p>'
-            : renderEvents(filtered, eventsList);
+                ? eventsList.innerHTML = '<p>No shows found</p>'
+                : renderEvents(filtered, eventsList);
 
         });
     });
