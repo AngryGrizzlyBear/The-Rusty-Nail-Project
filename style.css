@@ -189,6 +189,40 @@ nav li a {
 .event-action {
     text-align: right;
 }
+
+.about {
+    padding: 10px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about > h1 {
+font-family: var(--display-font);
+font-size: 2rem;
+color: var(--rust);
+}
+
+.about-stats {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    gap: 1rem;
+}
+
+.stat-num {
+    font-family: var(--display-font);
+    font-size: 3rem;
+    color: var(--rust-light);
+}
+
+.stat-label {
+    font-family: var(--body-font);
+    color: var(--yellow);
+}
+
+
 #hamburger {
     display: flex;
     flex-direction: column;
