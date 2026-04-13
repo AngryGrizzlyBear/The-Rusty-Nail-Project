@@ -186,6 +186,9 @@ nav li a {
     color: var(--cream);
 }
 
+.event-action {
+    text-align: right;
+}
 #hamburger {
     display: flex;
     flex-direction: column;
