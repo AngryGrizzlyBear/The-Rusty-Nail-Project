@@ -191,15 +191,18 @@ nav li a {
 }
 
 .about {
-    padding: 10px;
-    max-width: 700px;
-    margin: 0 auto;
+    padding: 2rem;
 }
 
-.about > h1 {
-font-family: var(--display-font);
-font-size: 2rem;
-color: var(--rust);
+.about>h1 {
+    font-family: var(--display-font);
+    font-size: 2rem;
+    color: var(--rust);
+}
+
+.about>p {
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .about-stats {
