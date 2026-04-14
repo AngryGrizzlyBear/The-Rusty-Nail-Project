@@ -225,6 +225,25 @@ nav li a {
     color: var(--yellow);
 }
 
+.staff-grid {
+    display: grid;
+    gap: 1rem;
+    background: var(--iron);
+}
+
+.card {
+    background: var(--charcoal);
+    padding: 1rem;
+}
+
+.card>img {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+.role {
+    color: var(--yellow)
+}
 
 #hamburger {
     display: flex;
@@ -255,6 +274,10 @@ nav li a {
     .featured-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .staff-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media(min-width: 600px) {
@@ -263,6 +286,10 @@ nav li a {
         grid-template-columns: 110px 1fr auto;
         align-items: center;
         gap: 1rem;
+    }
+
+    .staff-grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
