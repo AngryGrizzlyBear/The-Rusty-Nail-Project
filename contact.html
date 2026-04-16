@@ -31,58 +31,61 @@
             </ul>
         </nav>
     </header>
-    <section class="venue-info">
-        <h1>Contact</h1>
-        <div class="contact-info fade-up">
-            <h2>Hours of Operation</h2>
-            <dl>
-                <dt>Monday:</dt>
-                <dd>Closed</dd>
-                <dt>Tuesday:</dt>
-                <dd>7pm-2am</dd>
-                <dt>Wednesday:</dt>
-                <dd>Closed</dd>
-                <dt>Thursday:</dt>
-                <dd>7pm-2am</dd>
-                <dt>Friday:</dt>
-                <dd>8pm-4am</dd>
-                <dt>Saturday:</dt>
-                <dd>8pm-4am</dd>
-                <dt>Sunday:</dt>
-                <dd>Closed</dd>
-            </dl>
-            <h2>Contact Us:</h2>
-            <dl>
-                <dt>Adress:</dt>
-                <dd>2341 Roadhouse Lane</dd>
-                <dt>phone-number:</dt>
-                <dd>222-333-2211</dd>
-                <dt>email:</dt>
-                <dd>therustynail@fakeemail.com</dd>
-            </dl>
-        </div>
+    <div class="contact-section">
+        <section class="venue-info">
+            <h1>Contact</h1>
+            <div class="contact-info fade-up">
+                <h2>Hours of Operation</h2>
+                <dl>
+                    <dt>Monday:</dt>
+                    <dd>Closed</dd>
+                    <dt>Tuesday:</dt>
+                    <dd>7pm-2am</dd>
+                    <dt>Wednesday:</dt>
+                    <dd>Closed</dd>
+                    <dt>Thursday:</dt>
+                    <dd>7pm-2am</dd>
+                    <dt>Friday:</dt>
+                    <dd>8pm-4am</dd>
+                    <dt>Saturday:</dt>
+                    <dd>8pm-4am</dd>
+                    <dt>Sunday:</dt>
+                    <dd>Closed</dd>
+                </dl>
+                <h2>Contact Us:</h2>
+                <dl>
+                    <dt>Adress:</dt>
+                    <dd>2341 Roadhouse Lane</dd>
+                    <dt>phone-number:</dt>
+                    <dd>222-333-2211</dd>
+                    <dt>email:</dt>
+                    <dd>therustynail@fakeemail.com</dd>
+                </dl>
+                </div>
+        </section>
+        <section class="booking-form">
+            <form>
+                <label for="fname">First name:</label>
+                <input type="text" name="_gotcha" style="display:none">
+                <input type="text" id="fname" name="fname" required>
+                <label for="lname">Last name:</label>
+                <input type="text" id="lname" name="lname" required>
+                <label for="email">Enter your email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="reason">Reason for Contact</label>
+                <select id="reason" name="reason">
+                    <option value="">-- Select a reason --</option>
+                    <option value="general">General Enquiry</option>
+                    <option value="booking">Booking / Show Proposal</option>
+                    <option value="press">Press & Media</option>
+                    <option value="other">Other</option>
+                </select>
+    <label for="message">Message:</label>
+    <textarea id="message" name="user_message" placeholder="Enter your message here." required></textarea>
+    <input type="submit" value="Submit">
+    </form>
     </section>
-    <section class="booking-form">
-        <form>
-            <label for="fname">First name:</label>
-            <input type="text" name="_gotcha" style="display:none">
-            <input type="text" id="fname" name="fname" required>
-            <label for="lname">Last name:</label>
-            <input type="text" id="lname" name="lname" required>
-            <label for="email">Enter your email:</label>
-            <input type="email" id="email" name="email" required>
-            <select id="reason" name="reason">
-                <option value="">-- Select a reason --</option>
-                <option value="general">General Enquiry</option>
-                <option value="booking">Booking / Show Proposal</option>
-                <option value="press">Press & Media</option>
-                <option value="other">Other</option>
-            </select>
-            <label for="message">Message:</label>
-            <textarea id="message" name="user_message" placeholder="Enter your message here." required></textarea>
-            <input type="submit" value="Submit">
-        </form>
-    </section>
+  </div>
     <footer>Copyright 2026</footer>
 </body>
 
