@@ -92,6 +92,13 @@ input[type="submit"] {
     width: 100%;
 }
 
+footer {
+    padding: 1rem;
+    background-color: var(--charcoal);
+    color: var(--grey-mid);
+    font-family: var(--body-font);
+}
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -337,6 +344,11 @@ input[type="submit"] {
         overflow: visible;
         display: flex;
         gap: 1rem;
+    }
+
+    footer{
+        display: flex;
+        justify-content: space-between;
     }
 
     .contact-section {
