@@ -67,13 +67,15 @@ nav li a {
     color: var(--rust-light);
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     width: 100%;
     background-color: var(--iron);
     color: var(--cream);
     padding: 1rem;
     font-family: var(--body-font);
-    font-size:1rem;
+    font-size: 1rem;
     border: 1px var(--yellow) solid;
 }
 
@@ -97,6 +99,9 @@ footer {
     background-color: var(--charcoal);
     color: var(--grey-mid);
     font-family: var(--body-font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .hero {
@@ -111,6 +116,10 @@ footer {
 .hero>h1 {
     font-family: var(--display-font);
     font-size: 4rem;
+}
+
+.featured {
+    text-align: center;
 }
 
 .featured-grid {
@@ -346,9 +355,10 @@ footer {
         gap: 1rem;
     }
 
-    footer{
+    footer {
         display: flex;
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
     .contact-section {
