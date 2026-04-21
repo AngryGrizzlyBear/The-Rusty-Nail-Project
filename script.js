@@ -27,7 +27,8 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: 0.1
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px" 
 });
 
 const fadeUpElements = document.querySelectorAll('.fade-up');
