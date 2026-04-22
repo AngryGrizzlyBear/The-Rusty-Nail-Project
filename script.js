@@ -62,6 +62,8 @@ async function loadEvents() {
 
     if (!eventsList) return;
 
+    eventsList.innerHTML = '<p>Loading shows...</p>';
+
     try {
         const response = await fetch('data/events.json');
         allEventsData = await response.json();
