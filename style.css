@@ -70,6 +70,14 @@ nav li a {
     color: var(--rust-light);
 }
 
+nav li a:visited {
+    color: var(--rust-light);
+}
+
+a:visited {
+    color: var(--rust-light);
+}
+
 input,
 textarea,
 select {
