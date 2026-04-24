@@ -1,4 +1,4 @@
-// The Rusty Nail - Scripts 
+// The Rusty Nail - Scripts +
 const hamburger = document.querySelector('#hamburger');
 const nav = document.querySelector('nav ul');
 const navLinks = document.querySelectorAll('nav a');
